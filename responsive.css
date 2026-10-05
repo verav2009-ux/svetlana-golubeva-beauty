@@ -1,0 +1,196 @@
+html, body { overflow-x: hidden; }
+body * { min-width: 0; }
+.section-head > * { min-width: 0; }
+
+@media (max-width: 580px) {
+  .hero-copy { padding-left: 18px; padding-right: 18px; }
+  .hero h1 { font-size: clamp(38px, 13vw, 44px); overflow-wrap: anywhere; }
+  .hero-actions { align-items: stretch; }
+  .hero-actions .button { width: 100%; }
+  .facts { gap: 10px; }
+  .facts strong { font-size: 23px; }
+  .facts span { font-size: 11px; }
+  .section { padding: 72px 18px; }
+  .section h2, .cta h2 { font-size: clamp(32px, 11vw, 44px); overflow-wrap: anywhere; }
+  .section-head { grid-template-columns: minmax(0, 1fr); }
+  .services { grid-template-columns: minmax(0, 1fr); }
+  .service { padding: 24px; min-height: 280px; }
+  .service.wide img { width: 100%; }
+  .gallery { grid-template-columns: minmax(0, 1fr); grid-auto-rows: 320px; }
+  .gallery .tall { grid-row: auto; }
+  .gallery .wide-img { grid-column: auto; }
+  .portrait img { height: 480px; }
+  .education-grid > img { height: 280px; }
+  .credential-list b { overflow-wrap: anywhere; }
+  .cta { padding: 68px 18px; }
+  .contact-card { padding: 8px 20px; }
+}
+
+/* Large desktop and high-resolution displays */
+@media (min-width: 2100px) {
+  body { font-size: 20px; }
+  .header { height: 112px; padding-left: 6vw; padding-right: 6vw; gap: 48px; }
+  .header nav { gap: 40px; font-size: 18px; }
+  .brand span { width: 54px; height: 54px; }
+  .brand b { font-size: 23px; }
+  .button-small { padding: 15px 28px; }
+
+  .hero { height: 980px; min-height: 0; max-height: 980px; }
+  .hero-copy { padding: 150px 6.5vw 90px; align-self: center; }
+  .hero h1 { font-size: clamp(88px, 5.5vw, 128px); }
+  .lead { max-width: 860px; font-size: 25px; margin: 38px 0 42px; }
+  .button { padding: 20px 34px; font-size: 20px; }
+  .text-link { font-size: 19px; }
+  .facts { gap: 70px; margin-top: 74px; }
+  .facts strong { font-size: 42px; }
+  .facts span { font-size: 17px; }
+
+  .marquee { min-height: 92px; font-size: 16px; }
+  .section { width: 100%; max-width: none; padding: 140px 6vw; }
+  .section-head { grid-template-columns: 1.25fr .75fr; gap: 80px; margin-bottom: 72px; }
+  .section h2, .cta h2 { font-size: clamp(72px, 4vw, 96px); }
+  .section-head > p { font-size: 21px; max-width: 660px; }
+
+  .services { gap: 24px; }
+  .service { min-height: 410px; padding: 42px; }
+  .service h3 { font-size: 36px; margin-top: 62px; }
+  .service p { font-size: 20px; }
+  .service-bottom b { font-size: 38px; }
+  .service-bottom span { font-size: 17px; }
+  .service.wide { min-height: 310px; grid-template-columns: 1fr 430px 250px; gap: 46px; }
+  .service.wide img { height: 250px; }
+
+  .gallery { grid-auto-rows: 360px; gap: 18px; }
+  .about { grid-template-columns: .9fr 1.1fr; gap: 7vw; }
+  .portrait img { height: 900px; }
+  .about-copy { max-width: 940px; }
+  .big-copy { font-size: 42px; }
+  .about-copy > p:not(.eyebrow):not(.big-copy), .safety { font-size: 21px; }
+
+  .education-grid { gap: 80px; }
+  .education-grid > img { height: 620px; }
+  .credential-list > div { padding: 30px 0; }
+  .credential-list b { font-size: 29px; }
+  .credential-list small { font-size: 18px; }
+
+  .review-grid { gap: 24px; }
+  .review-grid blockquote { padding: 46px; }
+  .review-grid blockquote p { font-size: 27px; }
+  .review-grid footer { font-size: 17px; }
+
+  .cta { min-height: 620px; padding: 120px 7vw; }
+  .cta > div > p:not(.eyebrow) { font-size: 22px; }
+  .contact-card { padding: 20px 48px; font-size: 20px; }
+  .footer { padding: 48px 6vw; font-size: 18px; }
+}
+
+@media (min-width: 2100px) {
+  .hero-photo img { object-position: 56% top; }
+
+  #reviews { height: 54vh; min-height: 640px; max-height: 780px; padding-top: 48px; padding-bottom: 34px; }
+  #reviews .section-head { margin-bottom: 20px; }
+  #reviews .section-head h2 { font-size: clamp(62px, 3.5vw, 84px); }
+  #reviews .review-grid { gap: 20px; }
+  #reviews .review-grid blockquote { padding: 26px 32px; }
+  #reviews .review-grid blockquote p { font-size: 21px; line-height: 1.42; margin: 14px 0; }
+  #reviews .review-grid footer { font-size: 16px; }
+
+  #contact { height: 38vh; min-height: 440px; max-height: 540px; padding-top: 38px; padding-bottom: 38px; }
+  #contact h2 { font-size: clamp(52px, 3vw, 74px); }
+  #contact .contact-card { padding: 10px 38px; }
+  #contact .contact-card p { padding: 10px 0; }
+  .footer { min-height: 8vh; padding-top: 28px; padding-bottom: 28px; }
+}
+
+/* Full-screen desktop composition */
+@media (min-width: 2100px) {
+  .eyebrow { font-size: 26px; letter-spacing: .16em; margin-bottom: 20px; }
+
+  .hero { height: 100vh; min-height: 1100px; max-height: 1500px; overflow: hidden; }
+  .hero-copy { height: 100%; padding-top: 150px; padding-bottom: 90px; justify-content: center; }
+  .hero-photo { height: 100%; overflow: hidden; }
+  .hero-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 56% center; }
+  .hero h1 { font-size: clamp(92px, 5.3vw, 138px); line-height: 1.02; }
+  .lead { font-size: 28px; line-height: 1.55; }
+
+  #services { height: 100vh; min-height: 1200px; max-height: 1500px; display: flex; flex-direction: column; padding-top: 70px; padding-bottom: 70px; }
+  #services .section-head { margin-bottom: 36px; }
+  #services .services { flex: 1; min-height: 0; grid-template-columns: repeat(4, minmax(0, 1fr)); grid-template-rows: repeat(2, minmax(0, 1fr)); gap: 20px; }
+  #services .service { min-height: 0; height: auto; padding: 30px; }
+  #services .service h3 { margin: 24px 0 12px; font-size: 31px; }
+  #services .service p { font-size: 18px; line-height: 1.45; }
+  #services .service-bottom { padding-top: 12px; }
+  #services .service-bottom b { font-size: 32px; }
+  #services .service.wide { grid-column: auto; display: flex; min-height: 0; gap: 10px; }
+  #services .service.wide img { display: none; }
+  #services .service.wide .service-bottom { width: 100%; flex-direction: row; align-items: flex-end; }
+
+  #portfolio { height: 100vh; min-height: 1100px; max-height: 1500px; display: flex; flex-direction: column; padding-top: 70px; padding-bottom: 70px; }
+  #portfolio .section-head { margin-bottom: 36px; }
+  #portfolio .gallery { flex: 1; min-height: 0; grid-template-rows: repeat(2, minmax(0, 1fr)); grid-auto-rows: unset; }
+
+  #about { height: 100vh; min-height: 1100px; max-height: 1500px; padding-top: 70px; padding-bottom: 70px; }
+  #about .portrait img { height: min(880px, calc(100vh - 140px)); }
+  #about .about-copy > p:not(.eyebrow) { font-size: 25px; }
+  #about .big-copy { font-size: 42px; }
+  #about .safety { font-size: 23px; }
+
+  .education { height: 100vh; min-height: 1100px; max-height: 1500px; display: flex; flex-direction: column; padding-top: 70px; padding-bottom: 70px; }
+  .education .section-head { margin-bottom: 30px; }
+  .education-grid { flex: 1; min-height: 0; grid-template-columns: 1.35fr .65fr; gap: 70px; }
+  .education-grid > img { width: 100%; height: min(620px, calc(100vh - 470px)); object-fit: contain; object-position: center; background: #f8eeee; padding: 24px; }
+  .credential-list > div { padding: 24px 0; }
+  .credential-list span { font-size: 20px; }
+  .credential-list b { font-size: 32px; line-height: 1.2; }
+  .credential-list small { font-size: 21px; }
+
+  #reviews { height: 60vh; min-height: 720px; max-height: 900px; padding-top: 62px; padding-bottom: 48px; display: flex; flex-direction: column; }
+  #reviews .section-head { margin-bottom: 28px; }
+  #reviews .review-grid { flex: 1; min-height: 0; }
+  #reviews .review-grid blockquote { display: flex; flex-direction: column; justify-content: space-between; padding: 34px 40px; }
+  #reviews .review-grid blockquote p { font-size: 23px; line-height: 1.48; }
+
+  #contact { height: 40vh; min-height: 480px; max-height: 600px; padding-top: 48px; padding-bottom: 48px; }
+  #contact h2 { font-size: clamp(58px, 3.2vw, 82px); }
+  #contact .eyebrow { margin-bottom: 10px; }
+  #contact .light-button { margin-top: 6px; }
+  #contact .contact-card p { padding: 14px 0; }
+}
+
+@media (max-width: 580px) {
+  .header { z-index: 20; background: linear-gradient(180deg, rgba(24, 14, 17, .76), transparent); }
+  .hero { position: relative; display: block; min-height: 760px; overflow: hidden; }
+  .hero::after { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, rgba(29, 17, 20, .38) 0%, rgba(29, 17, 20, .72) 48%, rgba(29, 17, 20, .96) 100%); }
+  .hero-photo { position: absolute; inset: 0; height: 100%; }
+  .hero-photo::after { display: none; }
+  .hero-photo img { height: 100%; object-position: 57% center; filter: saturate(.72); }
+  .photo-note { display: none; }
+  .hero-copy { position: relative; z-index: 2; min-height: 760px; display: flex; flex-direction: column; justify-content: flex-end; padding-top: 110px; padding-bottom: 42px; }
+  .hero .eyebrow { color: #f0c5c0; margin-bottom: 12px; }
+  .hero h1 { font-size: clamp(40px, 13.2vw, 48px); text-shadow: 0 2px 24px rgba(0,0,0,.2); }
+  .lead { margin: 20px 0 22px; font-size: 16px; line-height: 1.55; color: #fff; }
+  .hero-actions { gap: 13px; }
+  .hero-actions .text-link { align-self: center; font-size: 14px; }
+  .facts { margin-top: 28px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,.24); }
+  .facts div { align-items: flex-start; }
+  .marquee { min-height: 58px; justify-content: center; white-space: normal; text-align: center; line-height: 1.4; }
+  .marquee > * { display: none; }
+  .marquee::before { content: "ДИПЛОМИРОВАННЫЙ МАСТЕР · СТЕРИЛЬНЫЕ ИНСТРУМЕНТЫ"; display: block; }
+}
+
+/* Final desktop framing adjustments */
+@media (min-width: 2100px) {
+  .hero-photo img { object-position: 56% top; }
+  #reviews { height: 54vh; min-height: 640px; max-height: 780px; padding-top: 48px; padding-bottom: 34px; }
+  #reviews .section-head { margin-bottom: 20px; }
+  #reviews .section-head h2 { font-size: clamp(62px, 3.5vw, 84px); }
+  #reviews .review-grid { gap: 20px; }
+  #reviews .review-grid blockquote { padding: 26px 32px; }
+  #reviews .review-grid blockquote p { font-size: 21px; line-height: 1.42; margin: 14px 0; }
+  #reviews .review-grid footer { font-size: 16px; }
+  #contact { height: 38vh; min-height: 440px; max-height: 540px; padding-top: 38px; padding-bottom: 38px; }
+  #contact h2 { font-size: clamp(52px, 3vw, 74px); }
+  #contact .contact-card { padding: 10px 38px; }
+  #contact .contact-card p { padding: 10px 0; }
+  .footer { min-height: 8vh; padding-top: 28px; padding-bottom: 28px; }
+}
